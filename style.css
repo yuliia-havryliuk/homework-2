@@ -10,7 +10,7 @@ li{
     list-style-type: none;
 }
 body{
-    background-color: floralwhite;
+    background-color: rgba(185,205,255,0.41);
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     line-height: 1.4;
@@ -26,10 +26,10 @@ body{
     display: flex;
     justify-content: space-between;
     background-color: white;
-    border: tomato 2px solid ;
+    border: darkblue 2px solid ;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: rgba(255,8,0,0.6) 0 0 50px;
+    box-shadow: rgba(39,80,255,0.67) 0 0 50px;
     width: 100%;
 }
 .classwork__content{
@@ -41,6 +41,7 @@ body{
 .homework__type{
     font-family: 'Pacifico', cursive;
     font-size: 24px;
+    color: tomato;
     padding: 10px;
 }
 .homework__item {
