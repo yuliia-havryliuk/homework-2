@@ -48,22 +48,15 @@
 // обманює вас юзер і перевіряти чи не прийшов вам null or
 // undefined.
 
-let userMoney = prompt('How much money do You have(in UAH)?')
+let userMoney = Number(prompt('How much money do You have(in UAH)?'))
 
 let convertDollar = userMoney * 0.0358;
-// alert(`You can receive: $${convertDollar.toFixed(2)}.`)
-
 let convertEuro = userMoney * 0.0297;
-// alert(`You can receive: €${convertEuro.toFixed(2)}.`)
-
 let brentConvert = userMoney / (64.63*27.95);
-// alert(`You can buy: ${brentConvert.toFixed(2)} brent features.`)
-
 let goldConvert = userMoney /(47.62*33.7);
-// alert(`You can receive ${goldConvert.toFixed(4)} gram of gold.`)
 
 if (isNaN(userMoney)) {
-    alert(`Write a number!`)
+    alert('Write a number!')
 } else if (Number(userMoney)){
     alert(`You can receive: $${convertDollar.toFixed(2)}.`)
     alert(`You can receive: €${convertEuro.toFixed(2)}.`)
@@ -188,3 +181,5 @@ if (arr[0]===arr[1] || arr[0]===arr[2] || arr[1]===arr[2]){
         alert('Упс! не та клавіша! Натисніть на клавішу від 1 до =')
 }
 // }
+
+
