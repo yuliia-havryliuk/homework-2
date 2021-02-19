@@ -97,9 +97,9 @@ if (userOrderSum < 500){
 alert("Let's play a game! Answer all five questions and receive a gift!")
 let userQuestion1 = prompt('First question: Зуб слона может весить до девяти килограмм?')
 let userQuestion2 = prompt('Second question: Размером с какой мяч глаз гигантского кальмара?')
-let userQuestion3 = +prompt('Third question: Сколько у лебедя перьев на теле?')
+let userQuestion3 = Number(prompt('Third question: Сколько у лебедя перьев на теле?'))
 let userQuestion4 = prompt('Forth question: Крысы могут смеяться если их пощекотать?')
-let userQuestion5 = +prompt('Fifth question: На сколько часов морские котики могут задерживать дыхание?')
+let userQuestion5 = Number(prompt('Fifth question: На сколько часов морские котики могут задерживать дыхание?'))
 let firstScore;
 if (userQuestion1==='Да'){
     firstScore=1;
@@ -113,7 +113,7 @@ if (userQuestion2==='баскетбольный'){
     secondScore=0;
 }
 let thirdScore;
-if(userQuestion3==='2500'){
+if(userQuestion3===2500){
     thirdScore=1;
 } else {
     thirdScore=0;
@@ -126,7 +126,7 @@ if(userQuestion4==='Да'){
 }
 
 let fifthScore;
-if(userQuestion5==='2'){
+if(userQuestion5===2){
     fifthScore=1;
 } else {
     fifthScore=0;
@@ -141,11 +141,19 @@ if (Score===5) {
 }
 
 
-
 // 4.Запитатись у користувача 3 значне число та сказати чи є у
 // ньому однакові цифри
 
+let userNumber = (prompt('Введіть трьохзначне число: '))
 
+let arr = userNumber.split('',3);
+console.log(arr)
+
+if (arr[0]===arr[1] || arr[0]===arr[2] || arr[1]===arr[2]){
+    alert('Знайдено співпадіння чисел')
+}  else{
+    alert('Не знайдено співпадіння чисел')
+}
 
 // 5.Запитатись у юзера одну кнопоку від 1 до = на клавіатурі та
 // вивести що буде при нажиманні цифри разом з шифтом.
@@ -180,14 +188,3 @@ if (Score===5) {
         alert('Упс! не та клавіша! Натисніть на клавішу від 1 до =')
 }
 // }
-
-let userNumber = (prompt('Введіть трьохзначне число: '))
-
-let arr = userNumber.split('',3);
-console.log(arr)
-
-if (arr[0]===arr[1] || arr[0]===arr[2] || arr[1]===arr[2]){
-    alert('Знайдено співпадіння чисел!')
-}  else{
-    alert('Не знайдено співпадіння чисел')
-}
