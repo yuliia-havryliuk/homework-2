@@ -180,3 +180,14 @@ if (Score===5) {
         alert('Упс! не та клавіша! Натисніть на клавішу від 1 до =')
 }
 // }
+
+let userNumber = (prompt('Введіть трьохзначне число: '))
+
+let arr = userNumber.split('',3);
+console.log(arr)
+
+if (arr[0]===arr[1] || arr[0]===arr[2] || arr[1]===arr[2]){
+    alert('Знайдено співпадіння чисел!')
+}  else{
+    alert('Не знайдено співпадіння чисел')
+}
