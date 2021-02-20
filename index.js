@@ -1,5 +1,6 @@
 'use strict';
 
+
 // Класна робота
 
 // 3.Емуляція гри в кубики, юзер клацає на конфірм та отримує
@@ -7,10 +8,10 @@
 // Якщо випадає 2 шестірки , вивести додаткове повідомлення що це - джекпот!
 
 // function task03() {
-  let min = 1;
-  let max = 6;
-  let randomNum1 = Math.floor(Math.random()*(max-min+1))+min;
-  let randomNum2 = Math.floor(Math.random()*(max-min+1))+min;
+  const Min = 1;
+  const Max = 6;
+  let randomNum1 = Math.floor(Math.random()*(Max-Min+1))+Min;
+  let randomNum2 = Math.floor(Math.random()*(Max-Min+1))+Min;
     alert(`Ваші числа ${randomNum1} та ${randomNum2}`);
 
     if (randomNum1===6 && randomNum2===6){
@@ -49,9 +50,11 @@
 // undefined.
 
 let userMoney = Number(prompt('How much money do You have(in UAH)?'))
+const DollarCurr = 0.0358;
+const EuroCurr = 0.0297;
 
-let convertDollar = userMoney * 0.0358;
-let convertEuro = userMoney * 0.0297;
+let convertDollar = userMoney * DollarCurr;
+let convertEuro = userMoney * EuroCurr;
 let brentConvert = userMoney / (64.63*27.95);
 let goldConvert = userMoney /(47.62*33.7);
 
@@ -70,9 +73,12 @@ if (isNaN(userMoney)) {
 // сертифікат на 200 гривень у подарунок!.
 
 let userOrderSum = +prompt('Write the summary of Your order:')
-let userOrderLess500 = userOrderSum * 0.01;
-let userOrderLess1000 = userOrderSum * 0.05;
-let userOrderMore1000 = userOrderSum * 0.1;
+const DiscountS = 0.01;
+const DiscountM = 0.05;
+const DiscountL = 0.1;
+let userOrderLess500 = userOrderSum * DiscountS;
+let userOrderLess1000 = userOrderSum * DiscountM;
+let userOrderMore1000 = userOrderSum * DiscountL;
 if (userOrderSum < 500){
     alert(`You receive 1% discount! It's ${userOrderLess500.toFixed(2)} UAH !`)
 } else if(userOrderSum >500 && userOrderSum<1000){
@@ -125,7 +131,7 @@ if(userQuestion5===2){
     fifthScore=0;
 }
 
-let Score=firstScore+secondScore+thirdScore+forthScore+fifthScore;
+const Score=firstScore+secondScore+thirdScore+forthScore+fifthScore;
 
 if (Score===5) {
     alert(`You receive ${+Score + 1} ★★★★★★!`);
@@ -181,5 +187,3 @@ if (arr[0]===arr[1] || arr[0]===arr[2] || arr[1]===arr[2]){
         alert('Упс! не та клавіша! Натисніть на клавішу від 1 до =')
 }
 // }
-
-
